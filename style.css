@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fce4ec; /* Açık pembe arka plan */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden; /* Buton hareket ettiğinde scroll oluşmasını engeller */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #e91e63; /* Koyu pembe başlık */
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative; /* Çocuk elementlerin (butonların) hareket etme sınırını belirler */
+    height: 50px; /* Butonların yüksekliği kadar bir alan sağlar */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#yesBtn {
+    background-color: #4CAF50; /* Yeşil */
+    color: white;
+}
+
+#noBtn {
+    background-color: #F44336; /* Kırmızı */
+    color: white;
+    /* HAYIR butonu için kritik ayar: Mutlak konumlandırma */
+    position: absolute;
+    /* EVET butonunun genişliğine göre başlangıç pozisyonu */
+    left: calc(50% + 15px); /* 50% ortalar, 15px gap, ve EVET butonunun yarısı */
+}
+
+#yesBtn:hover {
+    background-color: #45a049;
+}
+
+#resultMsg {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
